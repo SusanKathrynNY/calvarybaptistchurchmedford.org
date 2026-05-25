@@ -211,8 +211,8 @@ footer{background:#0a0202;padding:64px 64px 32px;}
 .fad a{color:rgba(255,255,255,0.3);transition:color 0.2s;}
 .fad a:hover{color:var(--rsf);}
 .fso{display:flex;gap:10px;}
-.fsc{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(255,255,255,0.45);transition:all 0.2s;}
-.fsc:hover{background:rgba(185,28,28,0.4);color:#fff;border-color:rgba(185,28,28,0.5);}
+.fsoc{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(255,255,255,0.45);transition:all 0.2s;}
+.fsoc:hover{background:rgba(185,28,28,0.4);color:#fff;border-color:rgba(185,28,28,0.5);}
 .fco h4{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:16px;}
 .flk{display:block;font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:11px;transition:color 0.2s;}
 .flk:hover{color:var(--rsf);}
@@ -311,22 +311,6 @@ footer{background:#0a0202;padding:64px 64px 32px;}
 <script>
 // Mobile menu toggle
 function toggleMenu(){document.getElementById('nlinks').classList.toggle('open');}
-// Prayer form handler
-function hPrayer(e){
-  e.preventDefault();
-  var f=e.target;
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-  .then(function(){document.getElementById('psucc').style.display='block';f.reset();})
-  .catch(function(){document.getElementById('psucc').style.display='block';f.reset();});
-}
-// Contact form handler
-function hForm(e){
-  e.preventDefault();
-  var f=e.target;
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-  .then(function(){document.getElementById('fsc').style.display='block';f.reset();})
-  .catch(function(){document.getElementById('fsc').style.display='block';f.reset();});
-}
 </script>
 
 </body>
